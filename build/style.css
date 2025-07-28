@@ -1,0 +1,141 @@
+/* Custom styles for better aesthetics */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.stopwatch-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.time-display {
+    font-size: 3.5rem; /* Larger font for time */
+    font-weight: 700;
+    color: #1a202c; /* Dark text color */
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+.control-button {
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+.control-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.start-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.start-button:hover {
+    background-color: #45a049;
+}
+.pause-button {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+.pause-button:hover {
+    background-color: #da190b;
+}
+.reset-button {
+    background-color: #607d8b; /* Blue-gray */
+    color: white;
+}
+.reset-button:hover {
+    background-color: #4a6572;
+}
+.lap-button {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+.lap-button:hover {
+    background-color: #0b7dda;
+}
+.lap-times-container {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0; /* Light gray border */
+    padding-top: 20px;
+    max-height: 250px; /* Max height for scrollable lap times */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 10px;
+    background-color: #f8fafc; /* Very light background for lap times */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.lap-times-container h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+.lap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #edf2f7; /* Lighter border for list items */
+    font-size: 1.05rem;
+    color: #4a5568;
+}
+.lap-item:last-child {
+    border-bottom: none;
+}
+.lap-item span:first-child {
+    font-weight: 500;
+    color: #2d3748;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .stopwatch-container {
+        padding: 25px;
+        gap: 20px;
+    }
+    .time-display {
+        font-size: 2.5rem;
+    }
+    .control-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .lap-times-container {
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+    .lap-times-container h2 {
+        font-size: 1.3rem;
+    }
+    .lap-item {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+}

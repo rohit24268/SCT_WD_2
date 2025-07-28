@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Stopwatch</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div id="time-display" class="time-display">00:00:00.000</div>
+
+        <div class="buttons-container">
+            <button id="start-pause-button" class="control-button start-button">Start</button>
+            <button id="lap-button" class="control-button lap-button" disabled>Lap</button>
+            <button id="reset-button" class="control-button reset-button" disabled>Reset</button>
+        </div>
+
+        <div class="lap-times-container">
+            <h2>Lap Times</h2>
+            <ul id="lap-list" class="lap-list">
+                <!-- Lap times will be inserted here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
